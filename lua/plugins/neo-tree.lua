@@ -19,6 +19,5 @@ return {
 			"<cmd>Neotree focus reveal_force_cwd<CR>",
 			{ desc = "Toggle file explorer on current file" }
 		) -- toggle file explorer on current file
-		vim.cmd([[highlight NeoTreeTitleBar guifg=black]])
 	end,
 }
