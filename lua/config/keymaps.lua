@@ -44,3 +44,7 @@ keymap.set("n", "<C-u>", "<C-u>zz") -- move up half a page ; then center
 -- center search results
 keymap.set("n", "n", "nzzzv") -- center search results going forward
 keymap.set("n", "N", "Nzzzv") -- center search results going backwards
+
+-- open/close quickfix menu (not trouble one)
+keymap.set("n", "<leader>bo", "<cmd>copen<CR>", { desc = "Open quickfix menu" })
+keymap.set("n", "<leader>bc", "<cmd>cclose<CR>", { desc = "Close quickfix menu" })
