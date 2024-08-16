@@ -19,6 +19,7 @@ return {
 			"<cmd>Neotree focus reveal_force_cwd<CR>",
 			{ desc = "Toggle file explorer on current file" }
 		) -- toggle file explorer on current file
-		vim.cmd([[highlight NeoTreeTitleBar guifg=black]])
+		-- Fixes bug were titleBar is completely white 
+		vim.cmd([[highlight NeoTreeTitleBar guifg=black guibg=#ebdbb2]])
 	end,
 }
