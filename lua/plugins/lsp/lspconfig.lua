@@ -116,6 +116,22 @@ return {
 					},
 				})
 			end,
+			["luau_lsp"] = function()
+				lspconfig["luau_lsp"].setup({
+					capabilities = capabilities,
+					-- Docs and Definitions required for Roblox definitions.
+					-- Find them on the Luau repo and add them in the correct location.
+					-- They provide the autocomplete and stuff and dont forget to generate
+					-- that file with rojo when using this lsp.
+					cmd = {
+						"luau-lsp",
+						"lsp",
+						"--no-flags-enabled",
+						"--docs=/home/tangeriney/.local/share/nvim/luau-lsp/api-docs.json",
+						"--definitions=/home/tangeriney/.local/share/nvim/luau-lsp/globalTypes.d.luau",
+					},
+				})
+			end,
 		})
 	end,
 }
