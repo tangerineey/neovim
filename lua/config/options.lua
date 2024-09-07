@@ -49,3 +49,6 @@ opt.scrolloff = 999
 
 -- enable virtualblock mode to move over empty cells
 opt.virtualedit = "block"
+
+-- make a colorcolum of 80 characters to enfore proper lines
+opt.colorcolumn = "80"
