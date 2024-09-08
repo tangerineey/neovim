@@ -103,6 +103,9 @@ return {
 				})
 			end,
 			["pyright"] = function()
+				-- Pyright requires that python files be within a git repo or
+				-- have a pyrightconfig.json file be present in the root
+				-- directory to function correctly.
 				lspconfig["pyright"].setup({
 					capabilities = capabilities,
 				})
