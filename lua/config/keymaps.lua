@@ -48,3 +48,5 @@ keymap.set("n", "N", "Nzzzv") -- center search results going backwards
 -- open/close quickfix menu (not trouble one)
 keymap.set("n", "<leader>bo", "<cmd>copen<CR>", { desc = "Open quickfix menu" })
 keymap.set("n", "<leader>bc", "<cmd>cclose<CR>", { desc = "Close quickfix menu" })
+keymap.set("n", "<leader>bn", "<cmd>cnext<CR>", { desc = "Next item in quickfix list" })
+keymap.set("n", "<leader>bp", "<cmd>cprev<CR>", { desc = "Previous item in quickfix list" })
