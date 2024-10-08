@@ -18,8 +18,8 @@ return {
 					i = {
 						["<C-k>"] = actions.move_selection_previous, -- move to prev result
 						["<C-j>"] = actions.move_selection_next, -- move to next result
-						-- This changes default telescope functionality so i've removed it for now.
-						-- ["<C-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+						-- Send ethier selected or all results from telescope to quickfix list 
+						["<C-q>"] = actions.smart_send_to_qflist + actions.open_qflist,
 					},
 				},
 			},
