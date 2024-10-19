@@ -40,22 +40,22 @@ return {
 				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
 				-- Cycle through function paramaters
-				-- ["<CR>"] = cmp.mapping.confirm({ select = false }),
+				["<CR>"] = cmp.mapping.confirm({ select = false }),
 				-- ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
 				-- ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-				["<CR>"] = cmp.mapping(function(fallback)
-					if cmp.visible() then
-						if luasnip.expandable() then
-							luasnip.expand()
-						else
-							cmp.confirm({
-								select = false,
-							})
-						end
-					else
-						fallback()
-					end
-				end),
+				-- ["<CR>"] = cmp.mapping(function(fallback)
+				-- 	if cmp.visible() then
+				-- 		if luasnip.expandable() then
+				-- 			luasnip.expand()
+				-- 		else
+				-- 			cmp.confirm({
+				-- 				select = false,
+				-- 			})
+				-- 		end
+				-- 	else
+				-- 		fallback()
+				-- 	end
+				-- end),
 
 				["<C-j>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
