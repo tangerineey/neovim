@@ -39,24 +39,9 @@ return {
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestions
 				["<C-e>"] = cmp.mapping.abort(), -- close completion window
-				-- Cycle through function paramaters
 				["<CR>"] = cmp.mapping.confirm({ select = false }),
-				-- ["<C-k>"] = cmp.mapping.select_prev_item(), -- previous suggestion
-				-- ["<C-j>"] = cmp.mapping.select_next_item(), -- next suggestion
-				-- ["<CR>"] = cmp.mapping(function(fallback)
-				-- 	if cmp.visible() then
-				-- 		if luasnip.expandable() then
-				-- 			luasnip.expand()
-				-- 		else
-				-- 			cmp.confirm({
-				-- 				select = false,
-				-- 			})
-				-- 		end
-				-- 	else
-				-- 		fallback()
-				-- 	end
-				-- end),
 
+				-- Use <C-j> and <C-k> for general completion suggestions
 				["<C-j>"] = cmp.mapping(function(fallback)
 					if cmp.visible() then
 						cmp.select_next_item()
@@ -72,6 +57,23 @@ return {
 						cmp.select_prev_item()
 					elseif luasnip.locally_jumpable(-1) then
 						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+
+				-- Use <C-h> and <C-l> for function parameters
+				["<C-h>"] = cmp.mapping(function(fallback)
+					if luasnip.locally_jumpable(-1) then
+						luasnip.jump(-1)
+					else
+						fallback()
+					end
+				end, { "i", "s" }),
+
+				["<C-l>"] = cmp.mapping(function(fallback)
+					if luasnip.locally_jumpable(1) then
+						luasnip.jump(1)
 					else
 						fallback()
 					end
