@@ -108,6 +108,18 @@ return {
 				-- directory to function correctly.
 				lspconfig["pyright"].setup({
 					capabilities = capabilities,
+					settings = {
+						pyright = {
+							-- Using Ruff's import organizer
+							disableOrganizeImports = true,
+						},
+						python = {
+							analysis = {
+								-- Ignore all files for analysis to exclusively use Ruff for linting
+								ignore = { "*" },
+							},
+						},
+					},
 				})
 			end,
 			["clangd"] = function()
@@ -117,6 +129,11 @@ return {
 						"clangd",
 						"--fallback-style=webkit",
 					},
+				})
+			end,
+			["ruff"] = function()
+				lspconfig["ruff"].setup({
+					capabilities = capabilities,
 				})
 			end,
 		})

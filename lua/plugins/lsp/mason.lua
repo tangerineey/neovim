@@ -32,6 +32,7 @@ return {
 				"lua_ls", -- lsp for lua
 				"pyright", -- lsp for python
 				"clangd", -- lsp for C
+				"ruff", -- lsp for python
 			},
 		})
 
@@ -40,9 +41,9 @@ return {
 			-- list of formatters/linters for mason to install
 			ensure_installed = {
 				"stylua", -- formatter for lua
-				"isort", -- formatter for python
-				"black", -- formatter for python
-				"mypy", -- linter for python
+				-- "isort", -- formatter for python
+				-- "black", -- formatter for python
+				-- "mypy", -- linter for python
 			},
 		})
 	end,
