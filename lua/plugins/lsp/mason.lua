@@ -33,6 +33,9 @@ return {
 				"pyright", -- lsp for python
 				"clangd", -- lsp for C
 				"ruff", -- lsp for python
+				"html",
+				"cssls",
+				"ts_ls",
 			},
 		})
 
