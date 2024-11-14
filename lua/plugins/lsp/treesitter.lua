@@ -15,7 +15,8 @@ return {
 			highlight = {
 				enable = true,
 			},
-			indent = { enable = false },
+			-- If there are issues with specific file types you can disable them here
+			indent = { enable = true },
 			-- enable autotagging (w/ nvim-ts-autotag plugin)
 			autotag = {
 				enable = true,
