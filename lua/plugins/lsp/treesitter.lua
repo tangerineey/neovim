@@ -18,7 +18,7 @@ return {
 			-- If there are issues with specific file types you can disable them here
 			indent = {
 				enable = true,
-				disable = { "python" },
+				-- disable = { "python" },
 			},
 			-- enable autotagging (w/ nvim-ts-autotag plugin)
 			autotag = {
