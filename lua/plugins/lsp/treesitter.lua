@@ -1,6 +1,5 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
-	event = { "BufReadPre", "BufNewFile" },
 	build = ":TSUpdate",
 	dependencies = {
 		"windwp/nvim-ts-autotag",
@@ -17,8 +16,7 @@ return {
 			},
 			-- If there are issues with specific file types you can disable them here
 			indent = {
-				enable = true,
-				-- disable = { "python" },
+				enable = false,
 			},
 			-- enable autotagging (w/ nvim-ts-autotag plugin)
 			autotag = {
