@@ -53,3 +53,7 @@ opt.virtualedit = "block"
 
 -- make a colorcolum of 80 characters to enfore proper lines
 opt.colorcolumn = "80"
+
+-- Make function arguments start at the same column
+-- https://stackoverflow.com/questions/11984520/vim-indent-align-function-arguments
+opt.cinoptions:append("(0")
