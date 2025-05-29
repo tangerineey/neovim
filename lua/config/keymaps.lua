@@ -51,3 +51,6 @@ keymap.set("n", "<leader>bc", "<cmd>cclose<CR>", { desc = "Close quickfix menu" 
 keymap.set("n", "<leader>bn", "<cmd>cnext<CR>", { desc = "Next item in quickfix list" })
 keymap.set("n", "<leader>bp", "<cmd>cprev<CR>", { desc = "Previous item in quickfix list" })
 keymap.set("n", "<leader>bg", "<cmd>cgetbuffer<CR>", { desc = "Saves buffer into quickfix list" })
+
+-- run Makefile, and open first error
+keymap.set("n", "<leader>m", "<cmd>silent make | cwindow | wincmd p<CR>", { desc = "Run Make and Open Errors"})
