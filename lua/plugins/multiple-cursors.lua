@@ -5,6 +5,14 @@ return {
         custom_key_maps = {
             {"n", "<Leader>|", function() require("multiple-cursors").align() end},
         };
+        pre_hook = function()
+            require('nvim-autopairs').disable()
+            require("cmp").setup({enabled=false})
+        end,
+        post_hook = function()
+            require('nvim-autopairs').enable()
+            require("cmp").setup({enabled=true})
+        end,
     },
     keys = {
         {"<Leader>j", "<Cmd>MultipleCursorsAddDown<CR>", mode = {"n", "x"}, desc = "Add cursor and move down"},
