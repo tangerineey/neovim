@@ -5,7 +5,8 @@ To get started simply clone the repo:
 git clone https://github.com/tangerineey/neovim.git
 ```
 
-
-
-
-
+Current Version I use: 
+NVIM v0.10.4
+Build type: Release
+LuaJIT 2.1.1713484068
+Run "nvim -V1 -v" for more info
