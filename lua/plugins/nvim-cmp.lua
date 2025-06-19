@@ -25,6 +25,9 @@ return {
 		-- loads vscode style snippets from installed plugins (e.g. friendly-snippets)
 		require("luasnip.loaders.from_vscode").lazy_load()
 
+        -- Add html snippets for ".erb" files
+        luasnip.filetype_extend("eruby", { "html" })
+
 		cmp.setup({
 			completion = {
 				completeopt = "menu,menuone,preview,noselect",
