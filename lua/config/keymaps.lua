@@ -53,4 +53,4 @@ keymap.set("n", "<leader>bp", "<cmd>cprev<CR>", { desc = "Previous item in quick
 keymap.set("n", "<leader>bg", "<cmd>cgetbuffer<CR>", { desc = "Saves buffer into quickfix list" })
 
 -- run Makefile, and open first error
-keymap.set("n", "<leader>m", "<cmd>silent make | cwindow | wincmd p<CR>", { desc = "Run Make and Open Errors"})
+keymap.set("n", "<leader>m", "<cmd>let winnr_before = winnr() | silent make | cwindow | execute winnr() != winnr_before ? 'wincmd p' : ''<CR>", { desc = "Run Make and Open Errors (No Focus)" })
