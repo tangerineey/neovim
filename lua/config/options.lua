@@ -60,3 +60,6 @@ opt.cinoptions:append("(0")
 
 -- Set session options for checkhealth
 opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
+
+-- Disable the nvim default tabline
+opt.showtabline = 0
