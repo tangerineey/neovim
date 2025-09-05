@@ -57,3 +57,6 @@ opt.colorcolumn = "80"
 -- Make function arguments start at the same column
 -- https://stackoverflow.com/questions/11984520/vim-indent-align-function-arguments
 opt.cinoptions:append("(0")
+
+-- Set session options for checkhealth
+opt.sessionoptions="blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
